@@ -10,9 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var coolLabel: UILabel!
+    
+    var tapCount = 0
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        
+        //coolLabel.text = "Hello there!"
+        //print("Button tapped")
+        
+        tapCount += 1
+        print(tapCount)
+        if tapCount >= 10 {
+            coolLabel.text = "You're a super button tapper!"
+        }
+    }
+    
+    @IBAction func button2Tapped(_ sender: Any) {
+        
+        tapCount += 1
+        coolLabel.text = "Buttons are cool!"
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
