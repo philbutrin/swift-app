@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         tapCount += 1
         print(tapCount)
-        if tapCount >= 10 {
+        if tapCount >= 20 {
             coolLabel.text = "You're a super button tapper!"
         }
     }
