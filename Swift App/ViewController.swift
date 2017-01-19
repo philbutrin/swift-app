@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var coolLabel: UILabel!
     
     @IBOutlet var text1: UITextField!
@@ -20,22 +20,28 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: Any) {
         
+        var addition = true
+        
         print(text1.text!)
         print(text2.text!)
         
         //coolLabel.text = text1.text! + text2.text!
         //coolLabel.text = String(Double(text1.text!)! + Double(text2.text!)!)
+        if addition {
+            coolLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            coolLabel.text = "Answer: \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
         
-        coolLabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
         
-         //coolLabel.text = "Hello there!"
-        //print("Button tapped")
+        // coolLabel.text = "Hello there!"
+        //  print("Button tapped")
         
-//        tapCount += 1
-//        print(tapCount)
-//        if tapCount >= 20 {
-//            coolLabel.text = "You're a super button tapper!"
-//        }
+        //        tapCount += 1
+        //        print(tapCount)
+        //        if tapCount >= 20 {
+        //            coolLabel.text = "You're a super button tapper!"
+        //        }
         
     }
     
@@ -43,7 +49,7 @@ class ViewController: UIViewController {
         
         tapCount += 1
         coolLabel.text = "Buttons are cool!"
-
+        
     }
     
     override func viewDidLoad() {
@@ -51,12 +57,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
